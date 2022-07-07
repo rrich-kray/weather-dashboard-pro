@@ -1,9 +1,10 @@
 .forecast {
     flex: 1.25;
     /* max-width: 25%; */
+    overflow-y: hidden;
     height: 100%;
     border-left: var(--light-border);
-    /* padding: 10px */
+    padding: 30px;
     position: relative
 }
 
@@ -16,7 +17,16 @@
     cursor: pointer;
 }
 
-.today {
+.forecast-panel {
+    height: calc(100% - 300px);
+}
+
+.forecast-tile {
+    width: 100%;
+    padding: 10px;
+}
+
+/* .today {
     height: 200px;
     width: 100%;
     position: relative;
@@ -30,23 +40,46 @@
 .today-tiles {
     height: 90%;
     width: 100%;
+    max-width: 100%;
     overflow-x: scroll;
 }
 
 .today-tile {
-    width: 100px;
+    width: 200px;
     height: 75%;
     border-radius: 12px;
     border: 1px solid black;
     margin-left: 5px;
     margin-right: 5px;
+} */
+
+.forecast-container {
+    flex: 1
 }
 
-.forecast-panel {
-    height: calc(100% - 300px);
+.forecast-container :nth-child(1) {
+    font-weight: bold;
 }
 
-.forecast-tile {
-    width: 100%;
-    padding: 10px
+.forecast-container :nth-child(2) {
+    color: rgba(100, 100, 100, 0.5);
 }
+
+.forecast-temp {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.forecast-temp span {
+    position: absolute;
+    font-weight: bold;
+    width: 75px;
+    left: 25%
+}
+
+.forecast-icon {
+    flex: 1;
+    height: 100%
+}
+
