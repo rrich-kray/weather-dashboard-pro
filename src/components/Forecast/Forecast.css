@@ -1,16 +1,21 @@
 .forecast {
-    flex: 1.25;
+    flex: 1;
     /* max-width: 25%; */
     overflow-y: hidden;
     height: 100%;
     border-left: var(--light-border);
-    padding: 30px;
-    position: relative
+    padding: 20px;
+    position: relative;
 }
 
 .week-selector {
     width: 100%;
     min-height: 100px
+}
+
+.week-selector :nth-child(even) {
+    font-weight: bold;
+    font-size: 1.5rem
 }
 
 .week-selector :nth-child(odd) {
@@ -23,8 +28,15 @@
 
 .forecast-tile {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.25s linear;
 }
+
+.forecast-tile:hover {
+    background: rgba(174, 169, 169, 0.25);
+}
+
 
 /* .today {
     height: 200px;
@@ -59,6 +71,7 @@
 
 .forecast-container :nth-child(1) {
     font-weight: bold;
+    font-size: 1.25rem
 }
 
 .forecast-container :nth-child(2) {
@@ -74,6 +87,7 @@
 .forecast-temp span {
     position: absolute;
     font-weight: bold;
+    font-size: 1.25rem;
     width: 75px;
     left: 25%
 }
