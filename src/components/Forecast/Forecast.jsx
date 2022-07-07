@@ -4,7 +4,7 @@ import { format_date, format_date_day, date_shortform } from '../../utils/helper
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-const Forecast = ({ weatherData }) => {
+const Forecast = ({ weatherData, changeActiveDay }) => {
     return (
         <div className="forecast">
             <div className="week-selector flex-row justify-around align-center">
@@ -22,7 +22,7 @@ const Forecast = ({ weatherData }) => {
             </div> */}
             <div className="forecast-panel flex-col justify-between">
                 {weatherData && weatherData.data.daily.map(day => (
-                    <div className="forecast-tile flex-row justify-between align-center">
+                    <div className="forecast-tile flex-row justify-between align-center" onClick={() => changeActiveDay(weatherData.data.daily.indexOf(day))}>
                         <div className="forecast-container flex-col align-start justify-center">
                             <span>{format_date_day(day.dt)}</span>
                             <span>{date_shortform(day.dt)}</span>

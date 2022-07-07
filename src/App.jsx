@@ -14,8 +14,9 @@ function App() {
     state: "OH",
     country: "USA"
   });
-  
-  console.log(formState)
+
+  const [activeDay, changeActiveDay] = useState(0)
+
   const options = {
     part: "",
     city: formState.city,
@@ -63,9 +64,11 @@ useEffect(() => {
           formState={formState}
           setFormState={setFormState}
           handleChange={handleChange}
+          activeDay={activeDay}
       />
         <Forecast 
           weatherData={weatherData}
+          changeActiveDay={changeActiveDay}
       />  
       </>
       )

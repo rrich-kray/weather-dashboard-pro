@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import LargeTile from "../LargeTile/LargeTile"
 import SmallTile from "../SmallTile/SmallTile"
 import "./Dash.css";
 
-const Dash = ({ weatherData, getWeatherData, formState, setFormState, handleChange, options}) => {
+const Dash = ({ weatherData, getWeatherData, formState, setFormState, handleChange, options, activeDay}) => {
     console.log(weatherData)
+
     return (
     <div className="dash">
         <nav className="nav flex-row justify-between align-center">
@@ -20,10 +21,10 @@ const Dash = ({ weatherData, getWeatherData, formState, setFormState, handleChan
         </nav>
         <div className="dash-main">
             <LargeTile weatherData={weatherData} dimensions={[1, 1, 3, 3]} options={options} formState={setFormState}/>
-            <SmallTile weatherData={weatherData} dimensions={[3, 1, 4, 2]} data={{primaryText: "Wind", secondaryText: "Today's Wind Speed", data: weatherData.data.daily[0].wind_speed}} />
-            <SmallTile weatherData={weatherData} dimensions={[3, 2, 4, 3]} data={{primaryText: "UVI", secondaryText: "Today's UVI", data: weatherData.data.daily[0].uvi}} />
-            <SmallTile weatherData={weatherData} dimensions={[4, 1, 5, 2]} data={{primaryText: "Humidity", secondaryText: "Today's Humidity", data: weatherData.data.daily[0].humidity}} />
-            <SmallTile weatherData={weatherData} dimensions={[4, 2, 5, 3]} data={{primaryText: "Dew Point", secondaryText: "Today's Dew Point", data: weatherData.data.daily[0].dew_point}} />
+            <SmallTile weatherData={weatherData} dimensions={[3, 1, 4, 2]} data={{primaryText: "Wind", secondaryText: "Today's Wind Speed", data: weatherData.data.daily[activeDay].wind_speed}} />
+            <SmallTile weatherData={weatherData} dimensions={[3, 2, 4, 3]} data={{primaryText: "UVI", secondaryText: "Today's UVI", data: weatherData.data.daily[activeDay].uvi}} />
+            <SmallTile weatherData={weatherData} dimensions={[4, 1, 5, 2]} data={{primaryText: "Humidity", secondaryText: "Today's Humidity", data: weatherData.data.daily[activeDay].humidity}} />
+            <SmallTile weatherData={weatherData} dimensions={[4, 2, 5, 3]} data={{primaryText: "Dew Point", secondaryText: "Today's Dew Point", data: weatherData.data.daily[activeDay].dew_point}} />
         </div> 
     </div>
     )
