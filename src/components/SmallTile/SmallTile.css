@@ -1,0 +1,34 @@
+.small-tile {
+    border-radius: 5px;
+    background: var(--small-tile);
+    margin: 15px;
+}
+
+.small-left-panel {
+    flex: 1;
+    height: 100%
+}
+
+.small-left-panel div {
+    margin-left: 20px;
+}
+
+.small-left-panel :nth-child(1) {
+    font-size: 2rem;
+    font-weight: bold
+}
+
+.small-left-panel :nth-child(2) {
+    color: rgba(100, 100, 100, 0.5);
+    font-weight: bold
+}
+
+.small-left-panel :nth-child(3) {
+    font-size: 1.75rem;
+    font-weight: bold
+}
+
+.small-right-panel {
+    flex: 1;
+    height: 100%;
+}

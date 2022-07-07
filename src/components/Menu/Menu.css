@@ -1,0 +1,38 @@
+.menu {
+    flex: 0.75;
+    height: 100%;;
+    padding: 20px;
+    border-right: 1px solid rgba(100, 100, 100, 0.25);
+}
+
+.logo {
+    margin-bottom: 75px
+}
+
+.logo img {
+    height: 75px;
+    margin-right: 20px
+}
+
+.logo span {
+    font-weight: bold
+}
+
+.link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 30px
+
+}
+
+.link img {
+    height: 30px;
+    margin-right: 20px
+}
+
+.link span {
+    font-weight: bold;
+    color: rgba(100, 100, 100, 0.5)
+}

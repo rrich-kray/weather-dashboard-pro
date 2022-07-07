@@ -1,0 +1,101 @@
+.large-tile {
+    display: flex;
+    background: var(--large-tile);
+    margin: 20px;
+    padding: 10px;
+}
+
+.tile-container-left {
+    flex: 1;
+    height: 100%;
+    position: relative
+}
+
+.location {
+    /* position: absolute; */
+    top: 5%;
+    width: 100%;
+    height: 25%;
+    padding-right: 10%;
+    padding-left: 10%
+    /* margin: 5%; */
+}
+
+.location :nth-child(1) {
+    color: white;
+    font-size: 2rem;
+    color: var(--font-day)
+}
+
+.location :nth-child(2) {
+    color: white;
+    font-size: 1.5rem;
+    color: var(--font-day)
+}
+
+.temp {
+    /* position: absolute; */
+    height: 50%;
+    width: 100%;
+    top: 0;
+    margin-top: auto;
+    bottom: 0;
+    margin-bottom: auto;
+}
+
+.temp :nth-child(1) {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--font-day)
+}
+
+.temp :nth-child(2) {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--font-day)
+}
+
+.other-info {
+    /* position: absolute; */
+    bottom: 0;
+    height: 25%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.other-tile {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.other-tile span {
+    color: var(--font-day);
+    font-weight: bold
+}
+
+.other-tile img {
+    height: 25px;
+    margin-right: 10px
+}
+
+.tile-container-right {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 10px;
+    position: relative
+}
+
+.tile-container-right header {
+    /* position: absolute; */
+    top: 0;
+    height: 25%;
+    width: 100%;
+    padding-left: 20px
+}
+

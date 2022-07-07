@@ -1,0 +1,41 @@
+.dash {
+    flex: 3;
+    height: 100%;
+}
+
+.nav {
+    width: 100%;
+    min-height: 100px
+}
+
+.search {
+    border: none;
+    border-radius: 12px;
+    margin: 0 0 20px 20px;
+    min-height: 30px 
+}
+
+.nav-right {
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-right img {
+    height: 50px
+}
+
+.dash-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: calc(100% - 100px)
+}
+
+.nav-left button {
+    height: 30px;
+    width: 100px;
+    background: none;
+    border-radius: 5px;
+    margin-left: 10px
+}
